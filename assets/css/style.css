@@ -1,128 +1,200 @@
 /* Global */
-body, html{
-	color: #424242;
-	background: rgb(60, 60, 60) url("../../assets/img/background.jpg") no-repeat center fixed; 
-	-webkit-background-size: cover;
-	background-size: cover;
+html, body{
+	color: rgb(40, 40, 40);
+	height: 100%;
+	background-color: transparent;
 	font-family:  'Roboto', sans-serif, sans-serif;
-	font-weight: 100;
+	font-weight: 300;
 }
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(../../assets/img/background.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 a{
-	color: #2196f3;
+	color: #1565c0;
 }
 a:hover{
-	color: #64b5f6;
+	color: #1565c0;
 }
-i{
-	vertical-align: middle !important;
-	color: #757575;
-}
+
 hr{
-	background-color: #424242;
+	background-color: rgb(160, 160, 160);;
 }
 h1{
 	font-weight: 300;
+	margin-top: 10px;
 }
 h2{
 	font-size: 26px;
 	text-align: center;
-	font-weight: 200;
+	font-weight: 300;
+	margin-bottom: 20px;
+	z-index: 1000;
+}
+h2.activite{
+	margin-bottom: 0px;
 }
 h3{
 	font-size: 22px;
-}
-
-/* Blocs */
-#page{
-	background-color: rgba(255, 255, 255, 0.96);
-	box-shadow: 0px 2px 20px black;
-
-	animation: 0.5s ease-out 0s 1 fadeIn;
-}
-
-@keyframes fadeIn {
-	from { 
-		transform: translateY(100%);
-		opacity:0; 
-	} 
-	to {
-		transform: translateY(0%);
-		opacity:1; 
-	}
-}
-#photo{
-	background-color: rgba(100, 181, 246, 0.08);
-}
-#contact{
-	background-color: rgba(100, 181, 246, 0.08);
-	font-weight: 100;
-}
-#studies{
-	background-color: rgba(129, 199, 132, 0.08);
-}
-#skills{
-	background-color: rgba(255, 183, 77, 0.08);
-}
-#experiences{
-	background-color: rgba(229, 115, 115, 0.08);
-}
-#jobs{
-	background-color: rgba(186, 104, 200, 0.1);
-}
-#hobbies{
-	background-color: rgba(161, 136, 127, 0.1);
-}
-
-/* Social */
-div#social a{
 	text-align: center;
-	display: inline-block;
-	width: 40px !important;
 }
-div#social a:hover{
-	transform: scale(1.3,1.3);
-	transition: all 0.3s;
+h4{
+	font-size: 22px;
+}
+
+.navbar{
+	box-shadow: 0px 0px 6px black;
+	background-color: rgba(252, 252, 252, 0.98) !important;
+	padding: 4px 20px 4px 20px;
+}
+.navbar a{
+	text-align: center;
+}
+.navbar a.active{
+	font-weight: 400;
+}
+
+div#haut{
+	background: transparent;
+	height: 48px;
+}
+
+
+/* Apparitions */
+div#page{
+	background-color: rgba(250, 250, 250, 0.96);
+	box-shadow: 0px 2px 20px black;
+}
+div#head{
+	box-shadow: 0px 0px 6px black;
+}
+div#skills{
+	padding: 56px 0 56px 0;
+	box-shadow: 0px 0px 6px black;
+}
+div#experiences{
+	padding: 56px 0 56px 0;
+	box-shadow: 0px 0px 6px black;
+}
+div#studies{
+	padding: 56px 0 56px 0;
+	box-shadow: 0px 0px 6px black;
+}
+
+/* Photo */
+img#photo{
+	filter: drop-shadow(0px 0px 6px grey);
+	width: 80%;
+	max-width: 600px;
+}
+
+.card{
+	background-color: transparent !important;
+	border-style: none !important;
+	margin-bottom: 10px;
+}
+.card a{
+	margin: 0 auto;
+}
+#skills .card-img-top{
+	width : 96px;
+	margin: 0 auto;
+	filter: drop-shadow(0px 0px 5px grey);
+}
+
+#experiences .card-img-top{
+	width : 64px;
+	margin: 0 auto;
 }
 
 /* Modal */
 .modal-content{
 	background-color: rgb(240, 240, 240);
-	box-shadow: 0px 0px 8px grey;
-	border-radius: 0px;
+	box-shadow: 0px 0px 20px black;
+	border-style: none;
+	border-radius: 3px;
 }
 
 /* Progress Bar */
 .progress{
 	border-radius: 0px;
 	height: 10px;
+	background-color: rgb(200, 200, 200);
 }
-.progress-bar{
-	background-color: #757575;
+
+.footer {
+	box-shadow: 0px 0px 6px black;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 32px;
+	line-height: 32px; /* Vertically center the text there */
+	background-color: rgba(252, 252, 252, 0.98);
 }
+span#droits{
+	font-weight: 100;
+	font-size: 10pt;
+}
+.footer i{
+	vertical-align: middle !important;
+	color: rgb(60, 60, 60);
+}
+div#pdf{
+	float: left;
+	height: 32px;
+}
+div#social{
+	text-align: right;
+}
+div#social a{
+	text-align: center;
+	display: inline-block;
+	width: 30px !important;
+}
+div#social a:hover{
+	transform: scale(1.3,1.3);
+	transition: all 0.3s;
+}
+
+div#contact i{
+	vertical-align: middle !important;
+	color: rgb(60, 60, 60);
+}
+
 
 /* Colors */
 .blue{
-	color: #2196f3;
+	color: #1565c0 !important;
 }
 .green{
-	color: #4caf50;
+	color: #388e3c !important;
 }
 .orange{
-	color: #ff9800;
+	color: #f57c00 !important;
 }
 .red{
-	color: #f44336;
+	color: #e53935 !important;
 }
 .purple{
-	color: #9c27b0;
-}
-.brown{
-	color: #795548;
+	color: #7b1fa2 !important;
 }
 
 /* Responsive limit */
 @media (min-width: 1200px) {
     .container{
-        max-width: 970px;
+        max-width: 1000px;
     }
 }
